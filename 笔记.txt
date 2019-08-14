@@ -22,9 +22,13 @@ git操作步骤
      
 4. git commit -m "描述"  :   //提交到仓库，永久保存
 
-5. 
+5. git branch  :查看但钱在那个分支
 
+6.  git branch 名称：创建分支
 
+7. git branch aaa -D  :删除分支
+
+8.git checkout branch :切换到admin 分支
 
 
 
