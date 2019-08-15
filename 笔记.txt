@@ -22,13 +22,33 @@ git操作步骤
      
 4. git commit -m "描述"  :   //提交到仓库，永久保存
 
-5. 
+5. git branch  :查看但钱在那个分支
+
+6.  git branch 名称：创建分支 
+
+  master：主分支，其他的分支都是在这个下面创建的
+  分支：同一个js文件，在不同的分支下面会显示不同代码
+  注意：所有的文件都在分支下面的，每个分支文件互不干扰，写代码时注意在那个分支下写的
+
+7. git branch aaa -D  :删除aaa分支
+
+8.git checkout branch :切换到admin 分支
+
+ 分支创建时注意：
+     1.文件在那个分支创建的，在哪个分支下才能看见  比如aa55分支创建了Index，只
+      能在aa55分支下才能看到该文件，其他分支看不见
+     2.如果当前分支代码发生变化，必须把变化保存之后才能切换到其他分支
+     3.在哪个分支上使用branch,就是在那个分支上做得扩展 
+     4.不能删除当前使用的分支
 
 
+9. 合并分支 ：git merge 合并分支名 
 
-
-
-
+合并之后的选项：
+Accept Current Change //接受目前的改变
+Accept Incoming  Change // 接受传入的改变
+Accept Both  Change // 接受两个的改变
+Accept Compare  Change // 接受比较的改变
 
 
 
