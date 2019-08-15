@@ -27,6 +27,7 @@ git操作步骤
 6.  git branch 名称：创建分支 
 
   master：主分支，其他的分支都是在这个下面创建的
+  分支：同一个js文件，在不同的分支下面会显示不同代码
 
 7. git branch aaa -D  :删除aaa分支
 
