@@ -24,7 +24,9 @@ git操作步骤
 
 5. git branch  :查看但钱在那个分支
 
-6.  git branch 名称：创建分支
+6.  git branch 名称：创建分支 
+
+master：主分支，其他的分支都是在这个下面创建的
 
 7. git branch aaa -D  :删除分支
 
