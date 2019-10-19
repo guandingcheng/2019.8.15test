@@ -1,0 +1,140 @@
+
+这节主要讲了git的使用：
+
+
+     1.cmd里面查看git版本号:  git --version
+
+    2. 注意：需要设置用户名和邮箱才能保存暂存的文件
+          git config --global user.email "you@example.com"； //设置邮箱 ,分开配置，输两次
+          git config --global user.name "Your Name"	;	//设置mingcheng
+
+      3.code打开vscode：不会打开对应的文件
+         code . 打开vscode会打开对应的文件	
+
+
+冉老师gitLab服务地址：http://g.ranyunlong.com/users/sign_in
+vue的官网 ： https://cn.vuejs.org/
+冉老师的vue官网克隆版  ：  http://vue.ranyunlong.com/
+
+课件地址：https://github.com/ranyunlong/web-1907-04
+
+
+
+
+                             第一部分 ： git操作步骤
+
+1.  git init :初始化仓库 ，会在初始化目录下创建一个 .git 的文件夹
+     .git文件是储存本地记录的
+
+2.  在cmd里面<code .>  ：打开编辑器可以使用git（有点像分享标识那）
+
+3.  git add  ./文件或目录(要全部添加就使用./就行) ：添加文件到仓库里面 ，
+    注意在哪个位置 ,此时只是提交到了暂存列表里（状态：STAGED CHANGES），
+    但是还没保存
+   
+     
+4. git commit -m "描述"  :   //提交到仓库，永久保存
+
+5. git branch  :查看当前在那个分支
+
+6.  git branch 名称：创建分支 
+
+  master：主分支，其他的分支都是在这个下面创建的
+  分支：同一个js文件，在不同的分支下面会显示不同代码
+  注意：所有的文件都在分支下面的，每个分支文件互不干扰，写代码时注意在那个分支下写的
+
+7. git branch aaa -D  :删除aaa分支
+
+8.git checkout branch :  切换到admin 分支
+
+ 分支创建时注意：
+     1.文件在那个分支创建的，在哪个分支下才能看见  比如aa55分支创建了Index，只
+      能在aa55分支下才能看到该文件，其他分支看不见
+     2.如果当前分支代码发生变化，必须把变化保存之后才能切换到其他分支
+     3.在哪个分支上使用branch,就是在那个分支上做得扩展 
+     4.不能删除当前使用的分支
+
+
+9. 合并分支 ：git merge 合并分支名  //与当前分支合并
+
+合并之后的选项：
+Accept Current Change //接受目前的改变，1. 相当于没有改变
+Accept Incoming  Change // 接受传入的改变 2.变成合并过来的那种，当前的不存在
+Accept Both  Change // 接受两个的改变，也就是合并成一个  3. 2个分支合并成一个
+Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样
+
+注意：合并（第三个）完成之后，先暂存之后才能保存
+
+
+10.项目合并原理：
+	项目成员提交保存自己的代码后，管理员使用git merge 合并项目成员的分支代码到主分支
+	master，第二天，项目成员再合并管理员(master)的代码，就可以了
+	
+	
+
+
+
+			第二部分 ： 远程仓库部分
+
+   首先：现在github新建一个存储库，然后拿到库的地址（存储库就是生成的网址），按照下面的12345
+              步骤一步一步执行就好了
+  	
+	
+1. git remote  :  查看远程仓库
+
+2. git remote add 仓库别名  仓库地址(github里面的https://github.com/guandingcheng/2019.8.15test.git)
+	:   添加仓库并且设置别名
+
+3. git remote remove 仓库别名 ：删除远程仓库(有需要时在删除)
+
+4. git push <仓库别名> <分支名称> ： //添加本地分支文件到远程仓库
+     4.1.  实例 : git push guan master ：把master的文件添加到远程仓库
+
+5.添加到远程仓库要先登陆github，输入账号和密码后就上传成功了
+
+
+如何下载上传的文件：
+
+//下载到的目录是git clone的当前目录地址（注意：上传的是哪个分支，下载的是哪个分支）
+//下载的文件默认有master总分只和origin仓库名称，下载
+
+6.git clone  远程项目地址 : 下载上传的文件
+
+//注意：下载之后的主分支文件可以再次上传（git push origin master），此时的仓库别名就是origin了，
+//提交的是克隆更新后的代码，更新过后，你第一次提交（克隆之前提交的）就不能直接提交了，因为克隆
+//下来更新的代码才是最新版本的     解决办法：在改之前就先同步远程仓库代码（执行第7条）
+ 
+7. git pull origin master : 拉取远程更新 , 加个-f是强制更新（不能这么做）
+    
+ 
+8. git fetch origin 远程分支名称 : 本地分支名称   //下载分支
+
+
+
+
+			第三部分：Gitlab部分
+
+1.需要自己搭建，一般用于公司自己内部使用
+
+2.设置ssh密钥：个人资料 - ssh密钥 - 生成密钥 - （ssh-keygen -t rsa -C "33057458@qq.com"）- 
+    然后在需要加密钥的文件右键 - Git Bash Here  - 输入（ssh-keygen -t rsa -C "33057458@qq.com"）
+    - 找到（.ssh/id_rsa.pub.）目录获取到生成的内容   - 复制到gitLab的SSH密钥下的公钥那里  - 
+
+3. git remote add 远程仓库别名  远程仓库地址（注意不是ssh是http路径）//监理远程仓库
+
+4. git push 远程仓库名  上传的分支  ： 上传本地文件到gitlab
+
+  如何忽略不上传到远程仓库的文件夹：建立(.gitignore)文件，没有后缀名，在里面添加需要忽略的文件夹
+
+
+
+
+
+
+
+
+
+
+
+
+
