@@ -66,8 +66,8 @@ vue的官网 ： https://cn.vuejs.org/
 合并之后的选项：
 Accept Current Change //接受目前的改变，1. 相当于没有改变
 Accept Incoming  Change // 接受传入的改变 2.变成合并过来的那种，当前的不存在
-Accept Both  Change // 接受两个的改变，也就是合并成一个  3. 2个分支合并成一个
-Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样
+Accept Both  Change // 接受两个的改变，也就是合并成一个(2个分支合并成一个)
+Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样/
 
 注意：合并（第三个）完成之后，先暂存之后才能保存
 
@@ -82,9 +82,13 @@ Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样
 
 			第二部分 ： 远程仓库部分
 
-   首先：现在github新建一个存储库，然后拿到库的地址（存储库就是生成的网址），按照下面的12345
-              步骤一步一步执行就好了
-  	
+首先：现在github新建一个存储库，然后拿到库的地址（存储库就是生成的网址），按照下面的12345
+          步骤一步一步执行就好了
+
+注意：需要设置用户名和邮箱才能保存暂存的文件，配置了在远程才知道是谁提交的
+  git config --global user.email "you@example.com"； //设置邮箱 ,分开配置，输两次
+  git config --global user.name "Your Name"	;	//设置用户名 
+
 	
 1. git remote  :  查看远程仓库
 
@@ -94,6 +98,7 @@ Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样
 3. git remote remove 仓库别名 ：删除远程仓库(有需要时在删除)
 
 4. git push <仓库别名> <分支名称> ： //添加本地分支文件到远程仓库
+   （可视化的推送）
      4.1.  实例 : git push guan master ：把master的文件添加到远程仓库
 
 5.添加到远程仓库要先登陆github，输入账号和密码后就上传成功了
@@ -106,12 +111,16 @@ Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样
 
 6.git clone  远程项目地址 : 下载上传的文件
 
-//注意：下载之后的主分支文件可以再次上传（git push origin master），此时的仓库别名就是origin了，
-//提交的是克隆更新后的代码，更新过后，你第一次提交（克隆之前提交的）就不能直接提交了，因为克隆
-//下来更新的代码才是最新版本的     解决办法：在改之前就先同步远程仓库代码（执行第7条）
+
+注意：下载之后的主分支文件可以再次上传（git push origin master），此时
+      的仓库别名就是origin了，提交的是克隆更新后的代码，更新过后，你第一
+      次提交（克隆之前提交的）就不能直接提交了，因为克隆下来更新的代码才
+      是最新版本的     解决办法：在改之前就先同步远程仓库代码（执行第7条）
+
  
-7. git pull origin master : 拉取远程更新 , 加个-f是强制更新（不能这么做）
-    
+7. git pull origin master : 拉取远程仓库更新, 加个-f是强制更新（不能这么做）
+    克隆是没有的时候下载，拉取更新是在有的基础上更新  
+   （可视化的拉取，拉去变基没有记录）
  
 8. git fetch origin 远程分支名称 : 本地分支名称   //下载分支
 
