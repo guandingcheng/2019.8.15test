@@ -128,7 +128,7 @@ Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样/
     克隆是没有的时候下载，拉取更新是在有的基础上拉取更新
    （可视化的拉取，拉去变基没有记录）
  
-8. git fetch origin 远程分支名称 : 本地分支名称   //下载分支
+8. git fetch origin 远程分支名称 : 本地分支名称 //把远程分支下载到本地分支目录下
 
 
 
@@ -143,7 +143,7 @@ Gitlab:企业自己使用的类似github一样的远程代码管理仓库
     然后在需要加密钥的文件右键 - Git Bash Here  - 输入（ssh-keygen -t rsa -C "33057458@qq.com"）
     - 找到（.ssh/id_rsa.pub.）目录获取到生成的内容   - 复制到gitLab的SSH密钥下的公钥那里  - 
 
-3. git remote add 远程仓库别名  远程仓库地址（注意不是ssh是http路径）//监理远程仓库
+3. git remote add 远程仓库别名  远程仓库地址（注意不是ssh是http路径）//建立远程仓库
 
 4. git push 远程仓库名  上传的分支  ： 上传本地文件到gitlab
 
