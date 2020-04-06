@@ -40,15 +40,15 @@ vue的官网 ： https://cn.vuejs.org/
 
 5. git branch  :查看当前在那个分支
 
-6.  git branch 名称：创建分支 
+6.  git branch 分支名称：创建分支 
 
   master：主分支，其他的分支都是在这个下面创建的
   分支：同一个js文件，在不同的分支下面会显示不同代码
   注意：所有的文件都在分支下面的，每个分支文件互不干扰，写代码时注意在那个分支下写的
 
-7. git branch aaa -D  :删除aaa分支
+7. git branch aaa -D  :删除aaa分支,注意:不能删除当前使用的分支
 
-8.git checkout branch :  切换到admin 分支
+8.git checkout aaaa :  切换到aaaa 分支
 
 分支详解: 创建分支，是在已有的文件的基础上创建的，所以分支创建好后会同
         步当前分支的文件， 示例：主分支>子分支（子分支有主分支文件）,
