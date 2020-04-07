@@ -148,7 +148,7 @@ Gitlab:企业自己使用的类似github一样的远程代码管理仓库
 4. git push 远程仓库名  上传的分支  ： 上传本地文件到gitlab
 
 5.如何忽略不上传到远程仓库的文件夹：建立(.gitignore)文件，没有后缀名，在里面添加需要忽略的文件夹
-
+ 5.1 例如： node_modules/   package-lock.json  或*.lock（忽略后缀是lock的文件）
 
 
 
