@@ -76,7 +76,7 @@ Accept Compare  Change // 接受比较的改变  4.比较哪些 不一样
 	项目成员提交保存自己的代码后，管理员使用git merge 合并项目成员的分支代码到主分支
 	master，第二天，项目成员再合并管理员(master)的代码，就可以了
 	
-	
+11.git status :查看项目状态	
 
 
 
